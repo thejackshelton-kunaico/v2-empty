@@ -1,6 +1,6 @@
 import { component$ } from "@qwik.dev/core";
 import {
-	QwikCityProvider,
+	QwikRouterProvider,
 	RouterOutlet,
 	ServiceWorkerRegister,
 } from "@qwik.dev/router";
@@ -18,7 +18,7 @@ export default component$(() => {
 	 */
 
 	return (
-		<QwikCityProvider>
+		<QwikRouterProvider>
 			<head>
 				<meta charset="utf-8" />
 				{!isDev && (
@@ -33,6 +33,6 @@ export default component$(() => {
 				<RouterOutlet />
 				{!isDev && <ServiceWorkerRegister />}
 			</body>
-		</QwikCityProvider>
+		</QwikRouterProvider>
 	);
 });

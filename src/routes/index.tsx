@@ -1,16 +1,15 @@
 import { component$ } from "@qwik.dev/core";
 import type { DocumentHead } from "@qwik.dev/router";
+import { Dropdown } from "@qwik-ui/headless";
 
 export default component$(() => {
 	return (
-		<>
-			<h1>Hi 👋</h1>
-			<div>
-				Can't wait to see what you build with qwik!
-				<br />
-				Happy coding.
-			</div>
-		</>
+		<Dropdown.Root>
+			<Dropdown.Trigger class="dropdown-trigger">Git Settings</Dropdown.Trigger>
+			<Dropdown.Popover class="dropdown-popover" gutter={8}>
+				<div>I am an item!</div>
+			</Dropdown.Popover>
+		</Dropdown.Root>
 	);
 });
 
